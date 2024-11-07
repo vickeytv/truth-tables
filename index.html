@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truth or False</title>
+</head>
+<style>
+body {
+  font-family: 'Comic Sans MS', sans-serif;
+  margin: 0;
+  padding: 30px;
+  background-color: #ffffff;
+  min-height: 0vh;
+}
+
+#trueorfalse {
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 12px;
+  font-size: 16px;
+  border-radius: px;
+  cursor: pointer;
+  width: 70px;
+  text-align: center;
+}
+
+button {
+  background-color: #cacacabb;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 6px 30px;
+  font-size: 16px;
+  margin: 10px 2;
+  border-radius: px;
+  cursor: pointer;
+  width: 123px;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #6e6e6e;
+}
+
+#a-number {
+  background-color: #ffffffbb;
+  color: rgb(0, 0, 0);
+  border: 1;
+  padding: 6px 30px;
+  font-size: 16px;
+  margin: 10px 2;
+  border-radius: px;
+  cursor: text;
+  width: 140px;
+  text-align: center;
+}
+
+#b-number {
+  background-color: #ffffffbb;
+  color: rgb(0, 0, 0);
+  border: 1;
+  padding: 6px 30px;
+  font-size: 16px;
+  margin: 10px 2;
+  border-radius: px;
+  cursor: text;
+  width: 140px;
+  text-align: center;
+}
+
+#update-numbers {
+  background-color: #c4c4c4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#update-numbers:hover {
+  background-color: #707070;
+}
+
+#result {
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 12px;
+  font-size: 16px;
+  border-radius: px;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #a7a7a7; 
+}
+
+th {
+  background-color: #c7c7c7;
+}
+
+#generate-row {
+  background-color: #003cff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#generate-row:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+
+<h1>Assignment 2</h1>
+<body>
+
+  <h3>True or False</h3>
+  <div id="trueorfalse">A: false<br>B: false</div>
+  </p>
+  </div>
+  
+  <button onclick="performOperation('a-true')">A True</button>
+  <button onclick="performOperation('a-false')">A False</button>
+</p>
+  <button onclick="performOperation('b-true')">B True</button>
+  <button onclick="performOperation('b-false')">B False</button>
+</p>
+
+<input type="number" id="a-number" placeholder="Enter 0 or 1 for A">
+</p>
+<input type="number" id="b-number" placeholder="Enter 0 or 1 for B">
+</p>
+<button id="update-numbers">Update Numbers</button>
+
+  
+  <h3>Logical Operation</h3>
+  
+  <p id="result">[Answer results here]</p>
+  <button onclick="performOperation('AND')">A AND B</button>
+  <button onclick="performOperation('OR')">A OR B</button>
+</p>
+  <button onclick="performOperation('NOT A')">NOT A</button>
+  <button onclick="performOperation('NOT B')">NOT B</button>
+
+  <h3>Truth Table</h3>
+  <button id="generate-row">Generate Now</button>
+  <table border="">
+    <thead>
+      <tr>
+        <th>A</th>
+        <th>B</th>
+        <th>A AND B</th>
+        <th>A OR B</th>
+        <th>A AND NOT B</th>
+        <th>A OR NOT B</th>
+        <th>(A OR B) AND NOT(A AND B)</th>
+        <th>(A AND B) OR NOT(A OR B)</th>
+      </tr>
+    </thead>
+    <tbody id="truth-table-body">
+        
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
